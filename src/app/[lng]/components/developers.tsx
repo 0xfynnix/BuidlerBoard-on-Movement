@@ -34,7 +34,7 @@ const languageColors: { [key: string]: string } = {
 
 function Developer({ data, rank, lng }: { data: BuilderboardDeveloper; rank: number; lng: string }) {
   const popularRepo = data.popular_repo;
-  const topLanguages = popularRepo.languages?.slice(0, 3) || [];
+  const topLanguages = popularRepo?.languages?.slice(0, 3) || [];
   
   return (
     <div className={`${rowStyle} py-4 items-start md:items-center text-xs text-[#F8FAFC]`}>

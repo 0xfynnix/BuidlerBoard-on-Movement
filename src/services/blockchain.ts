@@ -107,7 +107,13 @@ export class BlockchainService {
           ]
         }
       });
-
+      console.log('project score transaction', {
+        id: repository.id.toString(),
+        name: repository.name,
+        score: score,
+        stargazers_count: repository.stargazers_count,
+        forks_count: repository.forks_count,
+      });
       const authenticator = await this.client.transaction.sign({
         signer: this.account,
         transaction
